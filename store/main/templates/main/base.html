@@ -86,16 +86,16 @@
                             height="16">
                     </button>
                     <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Усі товари</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Кофти</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Халати</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Футболки</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Піджаки</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Джинси</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Взуття</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Аксесуари</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Піжами</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Шапки</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Усі товари</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Кофти</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Халати</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Футболки</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Піджаки</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Джинси</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Взуття</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Аксесуари</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Піжами</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Шапки</a></li>
                     </ul>
                 </div>
                 <!-- Значок кошика викликає модальне вікно -->
@@ -170,9 +170,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Закінчилась розмітка модального вікна -->
-            </div>
-        </div>
+                <!-- Закінчилась розмітка модального вікна{% url 'catalog:index' %}
         <!-- Контент -->
         <div class="container">
             <div class="row mt-1">
