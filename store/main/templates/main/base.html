@@ -57,7 +57,7 @@
                                 <li><a class="dropdown-item  text-white" href="carts/cart.html">Кошик</a></li>
                                 <li><a class="dropdown-item  text-white" href="users/profile.html">Особистий кабінет</a>
                                 </li>
-                                <li><a class="dropdown-item  text-white" href="#">Адмін панель</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url 'admin:index' %}">Адмін панель</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -170,7 +170,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- Закінчилась розмітка модального вікна{% url 'catalog:index' %}
+            </div>
+        </div>
+                <!-- Закінчилась розмітка модального вікна -->
         <!-- Контент -->
         <div class="container">
             <div class="row mt-1">
@@ -187,7 +189,7 @@
         </div>
     </section>
     <!-- Footer -->
-    {% block footer %}
+     {% block footer %}
 
     {% endblock %}
     <script src="{% static 'deps/js/jquery/jquery-3.7.0.min.js' %}"></script>
