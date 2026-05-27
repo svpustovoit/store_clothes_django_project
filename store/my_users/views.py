@@ -4,7 +4,7 @@ from django.contrib import auth
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
-from my_users.forms import UserLoginForm
+from my_users.forms import UserLoginForm, UserRegisterForm
 
 
 # Create your views here.
@@ -33,8 +33,19 @@ def login(request):
 
 
 def registration(request):
+    if request.method == "POST":
+        form = UserRegisterForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            user = form.instance
+            auth.login(request, user)
+            return HttpResponseRedirect(reverse("main:index"))
+    else:
+        form = UserRegisterForm()
+
     context = {
-       "title": "Clothing -Регістрація"
+       "title": "Clothing - Регістрація",
+        "form" : form
     }
     return render(request, "users/registration.html", context)
 
@@ -51,6 +62,7 @@ def users_cart(request):
 
 
 def logout(request):
-    ...
+    auth.logout(request)
+    return HttpResponseRedirect(reverse("main:index"))
 
 
