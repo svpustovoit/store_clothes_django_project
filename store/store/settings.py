@@ -27,7 +27,9 @@ SECRET_KEY = "django-insecure-9a1r%_5^#6r-&o!!jgdd*&1q9cfa(5f&y$^24^6l(81-hj)6_s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'store-clothes-django-project.onrender.com'
+]
 
 
 # Application definition
@@ -138,7 +140,7 @@ MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 INTERNAL_IPS = [
-    "store-clothes-django-project.onrender.com",
+    # ...
     "127.0.0.1",
     # ...
 ]
