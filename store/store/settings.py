@@ -138,7 +138,7 @@ MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 INTERNAL_IPS = [
-    # ...
+    "store-clothes-django-project.onrender.com",
     "127.0.0.1",
     # ...
 ]
